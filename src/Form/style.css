@@ -1,0 +1,28 @@
+.converter__label {
+    width: 100%;
+    max-width: 200px;
+    display: inline-block;
+    color: beige;
+}
+
+.converter__field {
+    border: 2px solid hsla(0, 5%, 21%, 0.466);
+    padding: 10px;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: beige;
+}
+
+.converter__fieldset {
+    border: 2px solid hsla(0, 5%, 21%, 0.466);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+
+.converter__legend {
+    background-color: beige;
+    padding: 15px;
+    border-radius: 5px;
+}

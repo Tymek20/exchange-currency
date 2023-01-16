@@ -1,0 +1,13 @@
+.result {
+    color: beige;
+    margin-top: 10px;
+}
+
+.result--convert {
+    margin: 10px 15px;
+    padding: 0px 10px;
+    background-color: beige;
+    border-radius: 5px;
+    font-size: 20px;
+    color: black;
+}
