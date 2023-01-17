@@ -10,7 +10,6 @@ const Form = ({ onName, onResult }) => {
         setResult(newAmount * currency);
     };
 
-
     const onFormSubmit = (event) => {
         event.preventDefault();
         calculate();
@@ -62,12 +61,14 @@ const Form = ({ onName, onResult }) => {
             </button>
             <p className="result">
                 {onResult}
-                <strong className="result--convert">
-                    {result.toFixed(2)}
+                <strong 
+                className="result--convert"
+                >
+                    {Number(result).toFixed(2)}
                 </strong>
             </p>
         </form>
     )
-}
+};
 
 export default Form;
