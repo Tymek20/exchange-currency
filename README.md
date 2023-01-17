@@ -5,6 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 # Tomasz Szkudlarek 
 ### This is just currency conversion, it's part of the "youcode" frontend course.
 [Currency Converter](https://tymek20.github.io/exchange-currency/)
+
 ![ConverterPhoto](https://github.com/Tymek20/exchange-currency/blob/master/src/images/exchange-currency.png?raw=true)
 
 #### Here is the rest of my works:
