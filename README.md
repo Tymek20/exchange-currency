@@ -2,6 +2,31 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Tomasz Szkudlarek 
+### This is just currency conversion, it's part of the "youcode" frontend course.
+[Currency Converter](https://tymek20.github.io/exchange-currency/)
+![ConverterPhoto]()
+
+#### Here is the rest of my works:
+- [homepage with BEM](https://tymek20.github.io/BEM-refactoring/)
+
+- [Zadanie domowe moduł 7](https://tymek20.github.io/modul-7-zadanie/)
+
+- [To do list](https://tymek20.github.io/Modul-8-todo-list-react/)
+#### Tech we learn to use: 
+- HTML
+- JAVASCRIPT
+- CSS
+- BEM
+- Markdown
+- Flex
+
+and a photo below of me with my son
+
+![Myfoto](https://github.com/tymek20/Currency-converter/blob/main/images/myphoto.jpg?raw=true)
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
