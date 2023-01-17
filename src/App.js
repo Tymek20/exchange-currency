@@ -8,8 +8,8 @@ function App() {
     <Container>
 
       <Form
-        onName="Kantor EUR/PLN"
-        onResult="Wartość EURO w PLN"
+        onName="Kantor Walut"
+        onResult="Wartość w PLN"
       />
 
       <Footer

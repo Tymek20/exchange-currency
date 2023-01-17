@@ -1,13 +1,17 @@
 import { useState } from "react";
 import "./style.css";
+import currencies from "../Currencies";
 
 const Form = ({ onName, onResult }) => {
     const [newAmount, setNewAmount] = useState("");
-    const currency = 4.7004;
     const [result, setResult] = useState("");
+    const [currency, setCurrency] = useState(currencies[0].code)
+
+    const rate = currencies.find(({ code }) =>
+        code === currency).rate;
 
     const calculate = () => {
-        setResult(newAmount * currency);
+        setResult(newAmount * rate);
     };
 
     const onFormSubmit = (event) => {
@@ -26,29 +30,38 @@ const Form = ({ onName, onResult }) => {
                 </legend>
                 <p>
                     <label className="converter__label">
-                        Kwota w EUR*
+                        Kwota
                         <input
                             value={newAmount}
                             onChange={({ target }) => setNewAmount(target.value)}
                             className="converter__field"
                             required type="number"
-                            placeholder="Wpisz kwotę w Euro"
+                            placeholder="Wpisz kwotę"
                             step="0.50"
                         />
                     </label>
                 </p>
                 <p>
                     <label className="converter__label">
-                        Kurs EUR/PLN
-                        <input
+                        Wybierz walutę:
+                        <select
                             className="converter__field"
-                            disabled
                             value={currency}
                             type="number"
-                        />
+                            onChange={({ target }) => setCurrency(target.value)}
+                        >
+                            {currencies.map((currency => (
+                                <option
+                                    key={currency.code}
+                                    value={currency.code}
+                                >
+                                    {currency.name}
+                                </option>
+                            )))};
+                        </select>
                     </label>
                     <p className="footer">
-                        Kurs na dzień 16.01.2023 źródło NBP.pl
+                        Kurs <strong>{rate}</strong> na dzień 16.01.2023 źródło NBP.pl
                     </p>
                 </p>
             </fieldset>
@@ -61,8 +74,8 @@ const Form = ({ onName, onResult }) => {
             </button>
             <p className="result">
                 {onResult}
-                <strong 
-                className="result--convert"
+                <strong
+                    className="result--convert"
                 >
                     {Number(result).toFixed(2)}
                 </strong>
