@@ -4,10 +4,16 @@ import "./style.css";
 const Form = ({ onName, onResult }) => {
     const [newAmount, setNewAmount] = useState("");
     const currency = 4.7004;
-    const result = newAmount * currency;
+    const [result, setResult] = useState("");
+
+    const calculate = () => {
+        setResult(newAmount * currency);
+    };
+
 
     const onFormSubmit = (event) => {
         event.preventDefault();
+        calculate();
     };
 
     return (
@@ -47,6 +53,13 @@ const Form = ({ onName, onResult }) => {
                     </p>
                 </p>
             </fieldset>
+            <button
+                className="button"
+                onSubmit={onFormSubmit}
+                onClick={calculate}
+            >
+                Przelicz
+            </button>
             <p className="result">
                 {onResult}
                 <strong className="result--convert">
@@ -55,6 +68,6 @@ const Form = ({ onName, onResult }) => {
             </p>
         </form>
     )
-};
+}
 
 export default Form;
