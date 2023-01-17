@@ -1,26 +1,21 @@
 import Container from "./Container";
-import Button from "./Button";
 import Footer from "./Footer";
 import Form from "./Form";
-import Result from "./Result";
 
 function App() {
+
   return (
     <Container>
-      <Form />
 
-      <Button
-        discription="Przelicz!"
-      />
-
-      <Result 
-      discription="Wartość EURO w PLN"
-      result="N/a"
+      <Form
+        onName="Kantor EUR/PLN"
+        onResult="Wartość EURO w PLN"
       />
 
       <Footer
         discription="Pola wymagane oznaczone *"
       />
+
     </Container>
   );
 }
