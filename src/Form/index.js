@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./style.css";
-import currencies from "../Currencies";
+import currencies from "../Data";
 
 const Form = ({ onName, onResult }) => {
     const [newAmount, setNewAmount] = useState("");
@@ -10,6 +10,9 @@ const Form = ({ onName, onResult }) => {
     const rate = currencies.find(({ code }) =>
         code === currency).rate;
 
+        const code = currencies.find(( {code }) =>
+        code === currency).code;
+ 
     const calculate = () => {
         setResult(newAmount * rate);
     };
@@ -30,7 +33,7 @@ const Form = ({ onName, onResult }) => {
                 </legend>
                 <p>
                     <label className="converter__label">
-                        Kwota
+                        Kwota*
                         <input
                             value={newAmount}
                             onChange={({ target }) => setNewAmount(target.value)}
@@ -61,7 +64,7 @@ const Form = ({ onName, onResult }) => {
                         </select>
                     </label>
                     <p className="footer">
-                        Kurs <strong>{rate}</strong> na dzień 16.01.2023 źródło NBP.pl
+                        Kurs<strong> {code} - {rate}</strong> na dzień 16.01.2023 źródło NBP.pl
                     </p>
                 </p>
             </fieldset>
