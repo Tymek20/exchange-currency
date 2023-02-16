@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./style.css";
+import { StyledDisplayDate } from "./styled";
 
 const CurrDate = () => {
     const [topDate, setTopDate] = useState(new Date());
@@ -34,11 +34,11 @@ const myTime = (topDate) =>
 const DisplayClock = () => {
 
     return (
-        <div className="displayDate">
+        <StyledDisplayDate>
             <p>
                 Dzisiaj jest {myDate(CurrDate())}, {myTime(CurrDate())}
             </p>
-        </div>
+        </StyledDisplayDate>
     );
 };
 

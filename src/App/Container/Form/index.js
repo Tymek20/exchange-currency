@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./style.css";
 import currencies from "../Form/Data";
+import { StyledButton, StyledField, StyledFooter, StyledResult, StyledConvertedField, StyledLegend, StyledLabel } from "./styled";
 
 console.log("Hello to all visiting developers")
 
@@ -26,31 +27,28 @@ const Form = ({ onName, onResult }) => {
 
     return (
         <form
-            className="converter"
             onSubmit={onFormSubmit}
         >
-            <fieldset className="converter__fieldset">
-                <legend className="converter__legend">
+            <StyledField>
+                <StyledLegend>
                     {onName}
-                </legend>
+                </StyledLegend>
                 <p>
-                    <label className="converter__label">
+                    <StyledLabel>
                         Kwota*
-                        <input
+                        <StyledConvertedField
                             value={newAmount}
                             onChange={({ target }) => setNewAmount(target.value)}
-                            className="converter__field"
                             required type="number"
                             placeholder="Wpisz kwotę"
                             step="0.50"
                         />
-                    </label>
+                    </StyledLabel>
                 </p>
                 <div>
-                    <label className="converter__label">
+                    <StyledLabel>
                         Wybierz walutę:
-                        <select
-                            className="converter__field"
+                        <StyledConvertedField as="select"
                             value={currency}
                             type="number"
                             onChange={({ target }) => setCurrency(target.value)}
@@ -63,28 +61,25 @@ const Form = ({ onName, onResult }) => {
                                     {currency.name}
                                 </option>
                             )))};
-                        </select>
-                    </label>
-                    <p className="footer">
+                        </StyledConvertedField>
+                    </StyledLabel>
+                    <StyledFooter>
                         Kurs<strong> {code} - {rate}</strong> na dzień 16.01.2023 źródło NBP.pl
-                    </p>
+                    </StyledFooter>
                 </div>
-            </fieldset>
-            <button
-                className="button"
+            </StyledField>
+            <StyledButton
                 onSubmit={onFormSubmit}
                 onClick={calculate}
             >
                 Przelicz
-            </button>
-            <p className="result">
+            </StyledButton>
+            <StyledResult>
                 {onResult}
-                <strong
-                    className="result--convert"
-                >
-                    {Number(result).toFixed(2)}
+                <strong>
+                    { Number(result).toFixed(2)}
                 </strong>
-            </p>
+            </StyledResult>
         </form>
     )
 };

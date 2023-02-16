@@ -12,7 +12,7 @@ function App() {
 
       <Form
         onName="Kantor Walut"
-        onResult="Wartość w PLN"
+        onResult="Wartość w PLN "
       />
 
       <Footer
