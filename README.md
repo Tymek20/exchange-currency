@@ -21,7 +21,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - BEM
 - Markdown
 - Flex
+- GRID
+- Immutability
 - React
+- Styled Components
 
 ## Available Scripts
 
