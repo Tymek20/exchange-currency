@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./style.css";
-import currencies from "./Data";
+import currencies from "../Data";
 
 console.log("Hello to all visiting developers")
 
