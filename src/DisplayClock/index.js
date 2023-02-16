@@ -17,18 +17,18 @@ const CurrDate = () => {
     return topDate;
 };
 
-const MyDate = (topDate) =>
+const myDate = (topDate) =>
     topDate.toLocaleString(undefined, {
         weekday: "long",
         day: "numeric",
         month: "long",
     });
 
-const MyTime = (topDate) =>
+const myTime = (topDate) =>
     topDate.toLocaleString(undefined, {
-        hour: "numeric",
-        minute: "numeric",
-        second: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
     });
 
 const DisplayClock = () => {
@@ -36,7 +36,7 @@ const DisplayClock = () => {
     return (
         <div className="displayDate">
             <p>
-                Dzisiaj jest {MyDate(CurrDate())}, {MyTime(CurrDate())}
+                Dzisiaj jest {myDate(CurrDate())}, {myTime(CurrDate())}
             </p>
         </div>
     );

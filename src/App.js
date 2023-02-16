@@ -1,12 +1,11 @@
 import Container from "./Container";
 import Footer from "./Footer";
 import Form from "./Form";
-import DisplayClock from "./MyDate";
+import DisplayClock from "./DisplayClock";
 
 
 
 function App() {
-
 
   return (
     <Container>
