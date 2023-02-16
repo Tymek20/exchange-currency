@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./style.css";
 import currencies from "../Form/Data";
 import { StyledButton, StyledField, StyledFooter, StyledResult, StyledConvertedField, StyledLegend, StyledLabel } from "./styled";
 
@@ -77,7 +76,7 @@ const Form = ({ onName, onResult }) => {
             <StyledResult>
                 {onResult}
                 <strong>
-                    { Number(result).toFixed(2)}
+                    {Number(result).toFixed(2)}
                 </strong>
             </StyledResult>
         </form>
