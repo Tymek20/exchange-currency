@@ -2,8 +2,8 @@ import { StyledFooter } from "./styled";
 
 const Footer = ({ discription }) => (
     <StyledFooter>
-      {discription}
+        {discription}
     </StyledFooter>
-  );
+);
 
 export default Footer;
