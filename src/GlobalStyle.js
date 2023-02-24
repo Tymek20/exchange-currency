@@ -10,12 +10,12 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: inherit;
         }
 
-    #root {
+    body {
         font-size: x-large;
         font-family: 'Open Sans', sans-serif;
         line-height: 1.5;
         background-image: url("${background}");
-        background-repeat: no-repeat;
-        background-position: 50% 45%;
+        background-position: center;
+        background-size: 130%;
     }
 `;
