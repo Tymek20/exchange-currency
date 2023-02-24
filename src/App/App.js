@@ -1,7 +1,7 @@
 import Container from "./Container";
-import Footer from "./Container/Footer";
-import Form from "./Container/Form";
-import DisplayClock from "./Container/DisplayClock";
+import Footer from "./Footer";
+import Form from "./Form";
+import DisplayClock from "./DisplayClock";
 
 function App() {
 

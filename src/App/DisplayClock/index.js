@@ -1,8 +1,8 @@
 import { StyledDisplayDate } from "./styled";
-import { useCurrDate, formatDate } from "./useCurrDate";
+import { useCurrentDate, formatDate } from "./useCurrentDate";
 
 const DisplayClock = () => {
-    const date = useCurrDate();
+    const date = useCurrentDate();
     return (
         <StyledDisplayDate>
             <p>

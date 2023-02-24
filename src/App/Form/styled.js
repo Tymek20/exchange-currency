@@ -10,12 +10,12 @@ export const StyledButton = styled.button`
     margin-top: 10px;
 
     &:hover {
-    background-color: hsl(60, 56%, 71%);
-    cursor: pointer;
+        background-color: hsl(60, 56%, 71%);
+        cursor: pointer;
     }
 
     &:active {
-    background-color: hsl(60, 56%, 60%);
+        background-color: hsl(60, 56%, 60%);
     }
 `;
 

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { format } from "date-fns";
 import { pl } from "date-fns/locale";
 
-export const useCurrDate = () => {
+export const useCurrentDate = () => {
     const [topDate, setTopDate] = useState(new Date());
 
     useEffect(() => {
